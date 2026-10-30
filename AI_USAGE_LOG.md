@@ -1,0 +1,7 @@
+# AI usage log
+
+- OpenAI GPT-6.1 Terra in OpenCode: read the assignment and dataset, drafted the prototype, scenario calculations, tests, and documentation. The optional runtime address assistant calls OpenAI only when the reviewer supplies a key.
+- Actual flaw in the first AI-built version: the mock sent customers declining prepaid to COD confirmation, while the economic model assumed they shipped COD directly. A requirement review exposed the mismatch; the formula and memo now use confirmation for non-converters, with a regression test.
+- Actual flaw in the first AI-built version: confirmation contribution losses were capped at zero, hiding possible gains when confirmation improved delivery. A hand-calculated edge case exposed it; the cap was removed and tested.
+- Actual weakness in the first AI-built version: LLM address feedback was purely informational and could not influence the recommendation. It can now escalate ship-as-is to confirmation when the model flags missing details, without changing the risk score or automatically cancelling. The real API still requires a reviewer-supplied key and must be evaluated with real examples before production.
+- Actual flaw in the first analysis: it counted 30 exact duplicate rows as separate orders. Checked duplicate IDs and full row contents, deduplicated identical rows without changing the supplied CSV, and recomputed the findings and backtest.

@@ -1,0 +1,12 @@
+{
+  "confirm_at": 0.25,
+  "nudge_at": 0.35,
+  "hold_at": 0.60,
+  "discount_rupees": 30,
+  "confirmation_reply_rate": 0.70,
+  "confirmed_rto_multiplier": 0.65,
+  "prepaid_conversion_rate": 0.30,
+  "prepaid_rto_rate": 0.04,
+  "gross_margin": 0.62,
+  "rto_cost": 169.4
+}
